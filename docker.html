@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="docker.css">
+
+    
+    <!-- <h2 class="h2">🐳</h2>
+    <h3 class="h3">Type your command here</h3>
+        <span style="color:white; font-style: bolid; border-radius: 100px;">[root@Dockerhost ~]#</span>
+        <input id="in1" />
+        <pre><div id="d1" style="color:white; font-style: bolid; font-family: Avenir Next; "></div>  <pre>
+        <button onclick="lw()"  class="btn">Run</button> -->
+    <div class="top">
+        <div class="heading">
+            <center><h1>Docker WEB UI</h1></center>
+        </div>        
+        
+        <div class="input">
+            <input id="in1"  placeholder="Enter your command">
+        </div>
+        <div class="button">
+            <button onclick="lw()"  class="btn">Run</button>
+        </div>
+       
+    </div>
+    <div class="output" id="output">
+        <div id="d1"></div>  
+    </div>
+
+            
+
+
+       <script>
+        function lw() {
+            // here xhr is a object from XMLHttpRequest() class
+            var i = document.getElementById("in1").value
+
+            var xhr = new XMLHttpRequest();
+            // here fasle means sync and true means async with AJAX
+            xhr.open("GET", "http://192.168.43.156/cgi-bin/code.py?x=" + i, true);
+            // here write IP(192.168.43.125) after config your IP adress using - (ifconfig enp0s3)
+            xhr.send();
+
+            // here  onload will take the return text from server [cgi-bin folder]
+            xhr.onload = function () {
+                var output = xhr.responseText;
+                document.getElementById("d1").innerHTML = output;
+            }
+        }
+    </script>
+
+
+
+
+
+
+</body>
+</html>

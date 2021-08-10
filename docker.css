@@ -1,0 +1,107 @@
+*{
+    padding: 0px;margin: 0px;box-sizing:border-box;
+    /* background-image: url('bg1.jpg'); */
+    
+}
+body{
+    /* background-image: url('bg1.jpg'); */
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* .top{
+    display: flex;
+} */
+.heading{
+    background-color: #03045e;
+    width: 20%;
+    margin-top: 40px;
+    color: white;
+    justify-content: center;
+    margin-left: 40%;
+    padding: 10px;
+    border-radius: 9px;
+    box-shadow: 10px 10px 10px grey;
+    display: inline-flex;
+    /* float: left; */
+    /* height: 50%; */
+}
+input{
+    height: 40px;
+    width: 60%;
+    margin-left: 10%;
+    margin-right: 60px;
+    margin-top: 50px;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    border: none;
+    border-bottom: 4px solid #03045e;
+    padding-bottom: 0px;
+   float: left;
+   outline: none;
+
+}
+.button{
+    margin-right: 15%;
+    margin-top: 40px;
+}
+button {
+    border-radius: 14px;
+    background-color: #03045e;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 25px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    height: 50px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
+  
+  button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  button:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  button:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  button:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+
+/* output */
+  .output{
+    /* background-color: black; */
+    opacity: 1px;
+    background: #03045e;
+    margin-top: 50px;
+    height: 55vh;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    color: white;
+    padding-left : 20px;
+    padding-top: 30px;
+    padding-right: 20px;
+    /* font-size: 40px; */
+    font-size: 16px;
+    /* text-align: center; */
+  }
